@@ -31,6 +31,7 @@ Plug 'blindFS/vim-taskwarrior'  " Enables task warrior grid view
 "Plug 'ajh17/VimCompletesMe' " Lightweight tab completion
 Plug 'plasticboy/vim-markdown'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 
 " List ends here. Plugins become visible to Vim after this call.
