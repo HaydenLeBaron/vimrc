@@ -30,6 +30,7 @@ Plug 'majutsushi/tagbar' " Provides taskwiki file navigation for taskwarrior
 Plug 'blindFS/vim-taskwarrior'  " Enables task warrior grid view
 "Plug 'ajh17/VimCompletesMe' " Lightweight tab completion
 Plug 'plasticboy/vim-markdown'
+Plug 'ctrlpvim/ctrlp.vim'
 
 
 " List ends here. Plugins become visible to Vim after this call.
@@ -42,6 +43,9 @@ call plug#end()
 " Configure command mode autocomplete
 set wildmenu
 set wildmode=list
+
+" Enable hybrid line numbers
+set number
 set relativenumber
 
 " Disable autocomment on next line
@@ -54,11 +58,11 @@ set shiftwidth=4  " when indenting with '>', use 4 spaces width
 set expandtab  " On pressing tab, insert 4 spaces
 
 " Configure vimwiki to use markdown files
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}, {'path': '~/exocortex/facio/vimwiki-cartographer/testwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
 "let g:markdown_folding = 'syntax'  " Enable folding by default on vimwiki markdown
 "let g:vimwiki_folding = 'syntax'  " Enable folding by default on vimwiki markdown
+
 
 
 "======================================
@@ -89,7 +93,17 @@ nmap <leader>w/ <C-w>v
 "horizontal split window
 nmap <leader>w- <C-w>s
 
-nmap <leader>o <Plug>VimwikiIndex
+nmap <leader>v <Plug>VimwikiIndex
+
+
+"======================================
+"= Aesthetic
+"======================================
+
+
+
+
+colorscheme landscape
 
 
 
@@ -99,9 +113,4 @@ nmap <leader>o <Plug>VimwikiIndex
 
 
 
-
-
-
-
-
-
+let lightline = {'colorscheme': 'landscape',}
